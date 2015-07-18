@@ -1,0 +1,38 @@
+{
+  "name": "drawer",
+  "version": "1.0.0",
+  "description": "A little library to help with animating lines and circles with the HTML canvas API.",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node_modules/.bin/watchify lib/main.js -o 'node_modules/.bin/exorcist drawer.js.map > drawer.js' -d -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolyatmax/drawer.git"
+  },
+  "author": "Taylor Baldwin <taylorbaldwin@gmail.com> (https://tbaldw.in)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rolyatmax/drawer/issues"
+  },
+  "homepage": "https://github.com/rolyatmax/drawer#readme",
+  "dependencies": {
+    "utils": "git+ssh://git@github.com:rolyatmax/utils.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "3.1.23",
+    "babelify": "6.1.3",
+    "browserify": "11.0.0",
+    "eslint": "0.24.1",
+    "exorcist": "0.4.0",
+    "watchify": "3.3.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  }
+}
