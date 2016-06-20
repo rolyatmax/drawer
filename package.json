@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/rolyatmax/drawer#readme",
   "dependencies": {
-    "loop": "git+ssh://git@github.com:rolyatmax/loop.git#48b8217"
+    "loop": "git+ssh://git@github.com:rolyatmax/loop.git#8e7636f"
   },
   "devDependencies": {
     "babel-eslint": "3.1.23",
