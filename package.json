@@ -4,7 +4,8 @@
   "description": "A little library to help with animating lines and circles with the HTML canvas API.",
   "main": "lib/drawer.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,9 @@
     "loop": "git+ssh://git@github.com:rolyatmax/loop.git"
   },
   "devDependencies": {
-    "babel-cli": "6.10.1",
-    "babel-eslint": "3.1.23",
-    "babel-preset-es2015": "6.9.0",
-    "eslint": "0.24.1"
+    "babel-cli": "^6.10.1",
+    "babel-eslint": "^6.1.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.13.1"
   }
 }

@@ -1,5 +1,7 @@
-let {register} = require('loop');
+import {createLoop} from 'loop';
 
+
+let {register} = createLoop();
 
 function easeIn(step, start, change) {
     return change * (1 - Math.pow(1 - step, 3)) + start;
@@ -108,7 +110,15 @@ class Drawer {
         radius *= 2;
         return startAnimation(step => {
             let angle = easeIn(step, startAngle, 2);
-            drawCircle(this.ctx, center, radius, startAngle * Math.PI, angle * Math.PI, color, width);
+            drawCircle(
+                this.ctx,
+                center,
+                radius,
+                startAngle * Math.PI,
+                angle * Math.PI,
+                color,
+                width
+            );
         }, duration);
     }
 
