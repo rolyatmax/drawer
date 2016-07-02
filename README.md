@@ -62,4 +62,9 @@ setting the line thickness. The default `width` is `1`.
 (This should probably also take an optional easing method.)
 
 ### drawer.clear()
-Takes no arguments, and simply clears the canvas.
+Takes no arguments and simply clears the canvas.
+
+### drawer.stop()
+Takes no arguments and simply stops all animation. Note: currently, the
+animation promises do not get resolved or rejected, and the canvas does not get
+cleared.

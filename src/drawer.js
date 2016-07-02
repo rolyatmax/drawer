@@ -1,7 +1,7 @@
 import {createLoop} from 'loop';
 
 
-let {register} = createLoop();
+let {register, clear} = createLoop();
 
 function easeIn(step, start, change) {
     return change * (1 - Math.pow(1 - step, 3)) + start;
@@ -139,6 +139,10 @@ class Drawer {
             let toDraw = cutArc(arc, perc);
             drawArc(this.ctx, toDraw, color, width);
         }, duration);
+    }
+
+    stop() {
+        clear();
     }
 
     clear() {
