@@ -1,6 +1,6 @@
 {
   "name": "drawer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A little library to help with animating lines and circles with the HTML canvas API.",
   "main": "lib/drawer.js",
   "scripts": {
