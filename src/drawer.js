@@ -93,14 +93,25 @@ function cutArc(arc, perc) {
 }
 
 class Drawer {
-    constructor(container) {
-        let {height, width} = container.getBoundingClientRect();
-        let canvas = document.createElement('canvas');
-        canvas.style.height = `${height}px`;
-        canvas.style.width = `${width}px`;
-        canvas.height = height * 2;
-        canvas.width = width * 2;
-        container.appendChild(canvas);
+    constructor(container, opts = {}) {
+        let canvas;
+        if (container.tagName === 'CANVAS') {
+            canvas = container;
+        } else {
+            let {height, width} = container.getBoundingClientRect();
+            canvas = document.createElement('canvas');
+            canvas.style.height = `${height}px`;
+            canvas.style.width = `${width}px`;
+            canvas.height = height;
+            canvas.width = width;
+            container.appendChild(canvas);
+        }
+        if (opts.retina) {
+            canvas.height *= 2;
+            canvas.width *= 2;
+        }
+
+        this.retina = opts.retina || false;
         this.ctx = canvas.getContext('2d');
         this.canvas = canvas;
     }
